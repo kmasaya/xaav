@@ -123,11 +123,11 @@ main(argc, argv)
       break;
     case KeyPress:
       l_keysym = XKeycodeToKeysym(_xres.dsp, l_event.xkey.keycode, 0 );
-      if(QUIT == l_keysym){	/* ��λ */
+      if(QUIT == l_keysym){
 	done = 1;
-      } else if(NEXT == l_keysym){ /* ���Υե������ */
+      } else if(NEXT == l_keysym){
 	ChangeFile(argc, argv, &_aares, 1);
-      } else if(PREV == l_keysym){ /* ���Υե������ */
+      } else if(PREV == l_keysym){
 	ChangeFile(argc, argv, &_aares, -1);
       }
       EventExpose(argc, argv, &_xres, &_aares, &_lineres);
